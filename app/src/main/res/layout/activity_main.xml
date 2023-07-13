@@ -7,18 +7,33 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText_costOfService"
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editText_costOfService"-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="@string/cost_of_service"-->
+    <!--        android:inputType="numberDecimal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guideline3"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/guideline4"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField_costOfService"
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_height="61dp"
         android:hint="@string/cost_of_service"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView_howWasTheService"
@@ -29,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/editText_costOfService" />
+        app:layout_constraintTop_toBottomOf="@+id/textField_costOfService" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -102,9 +117,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/tip_amount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_calculate" />
+        app:layout_constraintTop_toBottomOf="@id/button_calculate"
+        tools:text="@string/tip_amount" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
